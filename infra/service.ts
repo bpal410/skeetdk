@@ -34,7 +34,7 @@ new BlueskyPdsInfraStack(app, 'BlueskyPdsInfra', {
   mode: Mode.TEST,
   domainName: 'pds.example.com',
   domainZone: 'pds.example.com',
-  env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'us-east-2' },
+  env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'us-east-1' },
   tags: {
     project: 'bluesky-pds',
   },

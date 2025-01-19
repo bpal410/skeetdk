@@ -1,0 +1,28 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:latest",
+	"features": {
+		"ghcr.io/devcontainers/features/aws-cli:latest": {},
+		"ghcr.io/devcontainers-extra/features/aws-cdk:latest": {},
+		"ghcr.io/devcontainers/features/github-cli:latest": {},
+		"ghcr.io/mikaello/devcontainer-features/modern-shell-utils:latest": {}
+	},
+	// Mount the host's ~/.aws folder into the container.
+	// Set Envs. The chosen AWS_DEFAULT_PROFILE should be found in the above mount/repo
+	"remoteEnv": {
+		"AWS_PROFILE": "star43"
+	},
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {
+				"redhat.telemetry.enabled": false,
+				"aws.telemetry": false
+			},
+			"extensions": [
+				"AmazonWebServices.aws-toolkit-vscode",
+				"AmazonWebServices.amazon-q-vscode",
+				"GitHub.vscode-github-actions"
+			]
+		}
+	}
+}

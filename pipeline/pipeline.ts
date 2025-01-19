@@ -67,8 +67,8 @@ class BlueskyPdsPipelineStack extends Stack {
     );
     const sourceAction = new actions.CodeStarConnectionsSourceAction({
       actionName: 'GitHubSource',
-      owner: 'exampleuser',
-      repo: 'deploy-bluesky-pds-with-aws-cdk',
+      owner: 'bpal410',
+      repo: 'skeetdk',
       branch: 'main',
       connectionArn: githubConnection.attrConnectionArn,
       output: sourceOutput,
@@ -183,7 +183,7 @@ class BlueskyPdsPipelineStack extends Stack {
 
 const app = new App();
 new BlueskyPdsPipelineStack(app, 'BlueskyPdsPipeline', {
-  env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'us-east-2' },
+  env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'us-east-1' },
   tags: {
     project: 'bluesky-pds-pipeline',
   },
